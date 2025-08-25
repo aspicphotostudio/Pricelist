@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASPIC PHOTO STUDIO - Pricelist</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #d4af37; /* Emas elegan */
+  --accent: #ff6f61; /* Aksen hangat */
+  --dark: #111;
+  --light: #fdfdfd;
+  --bg-soft: #f7f3ef;
+  --overlay: rgba(0,0,0,0.15);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--bg-soft), #f0e9e0);
+  color: var(--dark);
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* HEADER (warna & komposisi tetap) */
+header {
+  background: linear-gradient(135deg, var(--dark), var(--primary));
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+
+header {
+  background: linear-gradient(135deg, var(--dark), var(--primary));
+  background-image: url('https://i.ibb.co.com/hRc9PgMG/Untitled-1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}  
+  background-image: url('https://i.ibb.co.com/hRc9PgMG/Untitled-1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+header p {
+  font-size: 22px;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+header::before {
+  content:"";
+  position:absolute;
+  width:200px; height:200px;
+  background: var(--accent);
+  border-radius:50%;
+  top:-50px; left:-50px;
+  opacity:0.3;
+  transform: rotate(45deg);
+}
+header::after {
+  content:"";
+  position:absolute;
+  width:300px; height:300px;
+  background: var(--light);
+  border-radius:50%;
+  bottom:-100px; right:-100px;
+  opacity:0.2;
+}
+
+/* SECTION & TITLES (warna & komposisi tetap) */
+section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+}
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--dark);
+  position: relative;
+}
+h2::after {
+  content:"";
+  display:block;
+  width:60px;
+  height:3px;
+  background: var(--primary);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* PACKAGES (warna & komposisi tetap) */
+.packages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+.package {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+.package:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+.package img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.package-content {
+  padding: 25px;
+  text-align: center;
+  position: relative;
+}
+.package h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+.package p {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+.booking-btn {
+  display: inline-block;
+  margin: 6px;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  background: var(--accent);
+  transition: background 0.3s, transform 0.2s;
+}
+.booking-btn:hover {
+  background: #e85a50;
+  transform: scale(1.05);
+}
+
+/* TEAM (warna & komposisi tetap) */
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+.member {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  width: 220px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+.member:hover {
+  transform: translateY(-8px);
+}
+.member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 4px solid var(--primary);
+}
+.member h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+.member p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Ornamen (warna & komposisi tetap) */
+.package::before, .member::before {
+  content:"";
+  position:absolute;
+  width:50px; height:50px;
+  background: var(--primary);
+  opacity:0.1;
+  border-radius:50%;
+  top: -15px; right: -15px;
+}
+.package::after, .member::after {
+  content:"";
+  position:absolute;
+  width:30px; height:30px;
+  background: var(--accent);
+  opacity:0.1;
+  border-radius:50%;
+  bottom: -10px; left: -10px;
+}
+
+/* FOOTER (warna & komposisi tetap) */
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 35px;
+  margin-top: 50px;
+  font-size: 14px;
+}
+
+/* MAP (warna & komposisi tetap) */
+.map-container {
+  margin-top: 50px;
+  text-align: center;
+}
+.map-container iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border: 0;
+  border-radius: 15px;
+}
+.address {
+  margin-top: 20px;
+  font-size: 18px;
+  color: var(--dark);
+}
+
+/* ====== MOBILE TWEAKS: hanya sesuaikan ukuran agar nyaman di HP ====== */
+@media (max-width: 600px) {
+  header { padding: 60px 16px; }
+  header h1 { font-size: 36px; letter-spacing: 1.5px; }
+  header p { font-size: 16px; }
+
+  section { margin: 32px auto; padding: 16px; }
+  h2 { font-size: 24px; margin-bottom: 24px; }
+  h2::after { width: 48px; height: 3px; }
+
+  .packages { gap: 20px; }
+  .package img { height: 180px; }
+  .package-content { padding: 16px; }
+  .package h3 { font-size: 20px; }
+  .package p { font-size: 14px; }
+  .price { font-size: 20px; }
+  .booking-btn { padding: 10px 16px; font-size: 14px; }
+
+  .team { gap: 16px; }
+  .member { width: 100%; padding: 16px; }
+  .member img { width: 90px; height: 90px; border-width: 3px; }
+  .member h3 { font-size: 16px; }
+  .member p { font-size: 13px; }
+
+  .map-container { margin-top: 30px; }
+  .map-container iframe { height: 260px; max-width: 100%; border-radius: 12px; }
+  .address { font-size: 14px; }
+
+  footer { padding: 24px; font-size: 12px; }
+}
+.background-gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+
+.background-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.background-gallery::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+  border-radius: 4px;
+}
+
+.background-gallery::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.background-card {
+  flex: 0 0 auto;
+  width: 216px;  /* proporsional dari 1080x1920 */
+  height: 384px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.background-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.background-card img:hover {
+  transform: scale(1.05);
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>ASPIC PHOTO STUDIO</h1>
+  <p>Pricelist & Booking</p>
+</header>
+
+<section>
+  <h2>Pilihan Background</h2>
+  <div class="background-gallery">
+    <div class="background-card"><img src="https://i.ibb.co.com/hJPDX8Hx/1-copy.jpg" alt="Background 1"></div>
+    <div class="background-card"><img src=https://i.ibb.co.com/k2QzgF70/2-copy.jpg" alt="Background 2"></div>
+    <div class="background-card"><img src="https://i.ibb.co.com/7JxDNXc6/3-copy.jpg" alt="Background 3"></div>
+    <div class="background-card"><img src="https://i.ibb.co.com/ym13BC8T/4-copy.jpg" alt="Background 4"></div>
+    <div class="background-card"><img src="https://i.ibb.co.com/LzcF7gcT/5.jpg" alt="Background 5"></div>
+    <div class="background-card"><img src="https://i.ibb.co.com/Y7N7N2h4/6.jpg" alt="Background 6"></div>
+    <div class="background-card"><img src="https://i.ibb.co.com/bgVFTTVy/putih-polos.jpg" alt="Background 7"></div>
+  </div>
+</section>
+
+
+<section>
+  <h2>Paket SelfPhoto</h2>
+  <div class="packages">
+    <div class="package">
+      <img src="https://i.ibb.co.com/VPhvpMF/pink-copy.jpg" alt="Group">
+      <div class="package-content">
+        <h3>Paket Group (3-8 orang)</h3>
+        <p>Durasi 15 menit sesi foto, All file.</p>
+        <div class="price">Rp 35.000/orang</div>
+        <a href="https://wa.me/6287839393293" class="booking-btn">WhatsApp</a>
+        <a href="https://instagram.com/aspicphotostudio_" class="booking-btn">Instagram</a>
+      </div>
+    </div>
+
+    <div class="package">
+      <img src="https://i.ibb.co.com/zTxF5ctR/wisuda.jpg" alt="Personal">
+      <div class="package-content">
+        <h3>Paket Personal (Sendiri)</h3>
+        <p>Durasi 15 menit sesi foto, All file.</p>
+        <div class="price">Rp 50.000</div>
+        <a href="https://wa.me/6287839393293" class="booking-btn">WhatsApp</a>
+        <a href="https://instagram.com/aspicphotostudio_" class="booking-btn">Instagram</a>
+      </div>
+    </div>
+
+    <div class="package">
+      <img src="https://i.ibb.co.com/Fq0nQNy1/ka-wira-mba-idah.jpg" alt="Bestie">
+      <div class="package-content">
+        <h3>Paket Bestie (2 orang Perempuan)</h3>
+        <p>Durasi 15 menit sesi foto, All file.</p>
+        <div class="price">Rp 85.000</div>
+        <a href="https://wa.me/6287839393293" class="booking-btn">WhatsApp</a>
+        <a href="https://instagram.com/aspicphotostudio_" class="booking-btn">Instagram</a>
+      </div>
+    </div>
+
+    <div class="package">
+      <img src="https://i.ibb.co.com/N2jnJLzm/materniti-sesi-copy.jpg" alt="Couple">
+      <div class="package-content">
+        <h3>Paket Couple (Pasangan)</h3>
+        <p>Durasi 20 menit sesi foto, All file + cetak ukuran 10R.</p>
+        <div class="price">Rp 150.000</div>
+        <a href="https://wa.me/6287839393293" class="booking-btn">WhatsApp</a>
+        <a href="https://instagram.com/aspicphotostudio_" class="booking-btn">Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Paket Foto Studio</h2>
+  <div class="packages">
+    <div class="package">
+      <img src="https://i.ibb.co.com/ycqD8fwx/ASPC5973-copy.jpg" alt="Personal">
+      <div class="package-content">
+        <h3>Paket Personal</h3>
+        <p>Durasi 20 menit sesi foto, All file + 5 file edit.</p>
+        <div class="price">Rp 250.000</div>
+        <a href="https://wa.me/6287839393293" class="booking-btn">WhatsApp</a>
+        <a href="https://instagram.com/aspicphotostudio_" class="booking-btn">Instagram</a>
+      </div>
+    </div>
+
+    <div class="package">
+      <img src="https://i.ibb.co.com/7dHzVmCJ/ASPC7368.jpg" alt="Group">
+      <div class="package-content">
+        <h3>Paket Group (3-15 orang)</h3>
+        <p>Durasi 30 menit sesi foto, All file + 10 file edit.</p>
+        <div class="price">Rp 350.000+</div>
+        <h3>Tergantung Jumlah</h3>
+        <a href="https://wa.me/6287839393293" class="booking-btn">WhatsApp</a>
+        <a href="https://instagram.com/aspicphotostudio_" class="booking-btn">Instagram</a>
+      </div>
+    </div>
+
+    <div class="package">
+      <img src="https://i.ibb.co.com/99vhdMBv/ASPC6006.jpg" alt="Family">
+      <div class="package-content">
+        <h3>Paket Family (3-5 orang)</h3>
+        <p>Durasi 45 menit, All file + 15 file edit, cetak ukuran 8R.</p>
+        <div class="price">Rp 400.000</div>
+        <a href="https://wa.me/6287839393293" class="booking-btn">WhatsApp</a>
+        <a href="https://instagram.com/aspicphotostudio_" class="booking-btn">Instagram</a>
+      </div>
+    </div>
+
+    <div class="package">
+      <img src="https://i.ibb.co.com/VcC5n93Z/123456.jpg" alt="Prewedding Indoor">
+      <div class="package-content">
+        <h3>Prewedding Indoor</h3>
+        <p>Durasi 45 menit sesi foto, All file + 15 file edit, cetak ukuran 10R.</p>
+        <div class="price">Rp 450.000</div>
+        <a href="https://wa.me/6287839393293" class="booking-btn">WhatsApp</a>
+        <a href="https://instagram.com/aspicphotostudio_" class="booking-btn">Instagram</a>
+      </div>
+    </div>
+  </div>
+</section> 
+
+<section>
+  <h2>Tambahan Paket</h2>
+  <div class="packages">
+    <div class="package">
+      <div class="package-content">
+        <h3>Perpanjangan Waktu</h3>
+        <p>Setiap tambahan 5 menit sesi foto.</p>
+        <div class="price">Rp 20.000</div>
+      </div>
+    </div>
+
+    <div class="package">
+      <div class="package-content">
+        <h3>Cetak Polaroid</h3>
+        <p>----</p>
+        <div class="price">Belum Tersedia</div>
+      </div>
+    </div>
+
+    <div class="package">
+      <div class="package-content">
+        <h3>Cetak 4R</h3>
+        <p>Cetak foto ukuran 10cm x 15cm.</p>
+        <div class="price">Rp 10.000/lembar</div>
+      </div>
+    </div>
+
+    <div class="package">
+      <div class="package-content">
+        <h3>Cetak 8R</h3>
+        <p>Cetak foto ukuran 20cm x 25cm.</p>
+        <div class="price">Rp 15.000/lembar</div>
+      </div>
+    </div>
+
+    <div class="package">
+      <div class="package-content">
+        <h3>Cetak 10R</h3>
+        <p>Cetak foto ukuran 25cm x 29cm.</p>
+        <div class="price">Rp 20.000/lembar</div>
+      </div>
+    </div>
+
+
+    <div class="package">
+      <div class="package-content">
+        <h3>Edit</h3>
+        <p>Per file foto edit tambahan.</p>
+        <div class="price">Rp 5.000/file</div>
+      </div>
+    </div>
+
+     </div>
+</section>
+
+<section>
+  <h2>Alamat</h2>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1276.8382381618082!2d115.75432362637538!3d-3.649302134602785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de8a1006a472f9f%3A0x112ff487137f1675!2sASPIC%20PHOTO%20STUDIO!5e1!3m2!1sid!2sid!4v1755927996215!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <div class="address">
+      Kalimantan Selatan, Tanah Bumbu, Kecamatan Sungai Loban, Desa Sari Mulya (Samping Dealer Yamaha)
+    </div>
+  </div>
+</section>
+<section>
+  <h2>Crew</h2>
+  <div class="team">
+    <div class="member">
+      <img src="https://i.ibb.co.com/sJQ7VDdD/ASPC6281-copy.jpg" alt="Agus">
+      <h3>Agus Susanto</h3>
+      <p>Owner, Photographer, Editor</p>
+    </div>
+    <div class="member">
+      <img src="https://i.ibb.co.com/4R20v23v/IMG-20250818-094120-953.webp" alt="Rahman">
+      <h3>Rahman</h3>
+      <p>Photographer, Videographer, Editor</p>
+    </div>
+    <div class="member">
+      <img src="https://i.ibb.co.com/N28TtNhp/DSCF9819.jpg" alt="Lolodya">
+      <h3>Laudya</h3>
+      <p>Photographer</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Aspic Photo Studio. All Rights Reserved.
+</footer>
+
+</body>
+</html>
